@@ -16,7 +16,7 @@ var bodyParser = require('body-parser')
 var { mongoose } = require('./db/mongoose')
 var { Log } = require('./models/log')
 
-var port = process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
 var app = express()
 app.use(bodyParser.json())
@@ -44,7 +44,7 @@ app.get('/log', (req,res) => {
   
     console.log(typeof logs)
 
-    var newObj = Object.keys(logs).reduce(function(previous, current) {
+    let newObj = Object.keys(logs).reduce(function(previous, current) {
       console.log(logs[current])
       var c = logs[current]
       previous[current] = {
