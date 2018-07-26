@@ -5,8 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
-    "test": "",
-    "test-manual": "mocha server/**/*.test.js",
+    "test": "set \"NODE_ENV=test\" && mocha server/**/*.test.js",
     "test-watch": "nodemon --exec \"npm test-manual\""
   },
   "author": "Jamie Weston",
